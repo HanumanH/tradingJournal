@@ -1,0 +1,272 @@
+<!DOCTYPE
+    html>
+
+<html
+    lang="en">
+
+<head>
+
+    <meta
+        charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        paesino.com
+    </title>
+
+    <!-- fonts will be pull from https://fonts.google.com -->   
+    <!-- this is the default font style for the entire website -->
+    <!-- CSS rules to specify this font families: "font-family: -->
+    <!-- 'Noto Sans', sans-serif; font-family: 'Syne', sans-serif;" -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+    
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Syne:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- this is the reference to the "style.css" file in the root folder -->
+    <!-- HTML get all it's CSS styling from this file -->
+    <link
+        href="/stylesheets/style.css"
+        rel="stylesheet"
+        type="text/css">
+
+</head>
+
+
+<body>
+    
+    <!-- the .container class provides a responsive fixed width container. -->
+    <div
+        class="container">
+    
+        <!-- content of form number one
+        - form input need to be submited to somewhere other than the page that we are on 
+        - we're going to submit our form to a page call "signInResult" by using the key word "action"
+        - there are two methods that you form can use, it is either a "GET" or "POST" 
+        - a "POST" request will post and save your form onto a server
+        - a "GET" request will append things to URL and it's going to send it to another page on your site -->
+        <form
+            action="./results/signInResult.html"
+            class="loginForm hideForm"
+            method="get"
+            id="login">
+            
+            <!-- how do I handle the appearance and disappearance of this text?
+            how this is just a placeholder so that we can style it in css -->
+            <!-- <div class="errorMessageCombination errorMessagesOnForm">incorrect username/password combination</div>
+            <div class="errorMessageGeneric errorMessagesOnForm">this is an error message</div>
+            <div class="errorMessageInput errorMessagesOnForm">input error message</div> -->
+
+            <!-- take off the text message after the property has been syled on css so that the text does not still display on the form -->
+            <div
+                class="errorMessageCombination errorMessagesOnForm">
+            </div>
+            
+            <div
+                class="errorMessageGeneric errorMessagesOnForm">
+            </div>
+            
+            <div
+                class="errorMessageInput errorMessagesOnForm">
+            </div>
+
+            
+            
+            <!-- input element is input that will be done by user and input onto the page
+            - input tag don't need to be close since it does not allow you to specify anything inside the tag
+            - put the lable element for our input field above the input tag 
+            - we put our input element inside a div tag so that they are not all on the same line
+            - in order for an input to show up on signInResult.html we need to specify a name for that input -->
+            <div>
+                <input
+                    type="text"
+                    class="loginInputField loginInputField-error"
+                    autofocus
+                    placeholder="username or email"
+                    name="userOrEmail"
+                    required>
+            </div>
+            
+            <!-- input type password will show a secret font in the input field
+            placehoder give more information to the user as instruction 
+            required prenvent a blank input from being process -->
+            <div>
+                <input
+                    type="password"
+                    class="loginInputField loginInputField-error"
+                    placeholder="password"
+                    name="password"
+                    required>
+            </div>
+            
+            <!-- creating a button to submit our form
+            - with type summit we can hit an enter key and it will submit on top of clicking the button -->
+            <div>
+                <button
+                    class="formButton"
+                    type="submit">sign in
+                </button>
+            </div>
+            
+            <!-- need to link reference p tag to click on
+            - in Java Script we need to reference the angkor tag -->
+            <p
+                class="linkTextOnForm">
+                <a
+                    id="forgotPassword"
+                    class="formLink">forgot password
+                </a>
+            </p>
+
+            <!-- need to link reference p tag to click on
+            - no need for href or url to link to another form because you simply just need to display the hidden form -->
+            <p
+                class="linkTextOnForm">
+                <a
+                    class="formLink"
+                    href="./"
+                    id="linkCreateAccount">create account
+                </a>
+            </p>
+
+        </form>
+
+
+
+
+        <!-- contents of form number two -->
+        <form
+            action="./results/signInResult.html"
+            class="createAccountForm"
+            id="createAccount">
+
+            <h1
+                class="formHeading">create account
+            </h1>
+
+
+            <!-- how do I handle the appearance and disappearance of this text?
+            how this is just a placeholder so that we can style it in css -->
+            <!-- <div class="errorMessageCombination errorMessagesOnForm">incorrect username/password combination</div>
+            <div class="errorMessageGeneric errorMessagesOnForm">this is an error message</div>
+            <div class="errorMessageInput errorMessagesOnForm">input error message</div> -->
+
+            <!-- take off the text after the property has been syled on css so that the text does not still display on the form -->
+            <div
+                class="errorMessageCombination errorMessagesOnForm">
+            </div>
+            
+            <div
+                class="errorMessageGeneric errorMessagesOnForm">
+            </div>
+
+            <div
+                class="errorMessageInput errorMessagesOnForm">
+            </div>
+                        
+            <!-- input element is input that will be done by user and input onto the page
+            - input tag don't need to be close since it does not allow you to specify anything inside the tag
+            - put the lable element for our input field above the input tag 
+            - we put our input element inside a div tag so that they are not all on the same line
+            - in order for an input to show up on signInResult.html we need to specify a name for that input -->
+            <span>
+                <input
+                    type="text"
+                    class="registrationInputField loginInputField-error"
+                    autofocus
+                    placeholder="first name"
+                    name="firstName"
+                    required
+                    id="firstName">
+            </span>
+
+            <span>
+                <input
+                    type="text"
+                    class="registrationInputField loginInputField-error"
+                    autofocus
+                    placeholder="m.i."
+                    name="middleInitial"
+                    id="middleInitial">
+            </span>
+
+            <span>
+                <input
+                    type="text"
+                    class="registrationInputField loginInputField-error"
+                    autofocus
+                    placeholder="last name"
+                    name="lastName"
+                    id="lastName"
+                    required>
+            </span>
+
+            <div>
+                <input
+                    type="text"
+                    class="registrationInputField loginInputField-error"
+                    placeholder="email"
+                    name="userEmail"
+                    required>
+            </div>
+
+            <!-- input type password will show a secret font in the input field
+            placehoder give more information to the user as instruction 
+            required prenvent a blank input from being process -->
+            <div>
+                <input
+                    type="password"
+                    class="registrationInputField loginInputField-error"
+                    placeholder="password"
+                    name="createPassword"
+                    required>
+            </div>
+
+            <div>
+                <input
+                    type="password"
+                    class="registrationInputField loginInputField-error"
+                    placeholder="confirm password"
+                    name="passwordConfirmed"
+                    required>
+            </div>
+            
+            <!-- creating a button to submit our form
+            - with type summit we can hit an enter key and it will submit on top of clicking the button -->
+            <div>
+                <button
+                    class="formButton"
+                    type="submit">continue
+                </button>
+            </div>
+
+            <!-- need to link reference p tag to click on
+            - no need for href or url to link to another form because you simply just need to display the hidden form -->
+            <p
+                class="linkTextOnForm">
+                <a
+                    class="formLink"
+                    href="./"
+                    id="linkLogin">already have an account
+                </a>
+            </p>
+
+        </form>
+    </div>
+    <!-- HTML will reference this file for all Java Scripts code -->
+    <script src="/javascripts/script.js"></script>
+
+</body>
+
+</html>
