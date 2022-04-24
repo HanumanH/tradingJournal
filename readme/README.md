@@ -17,3 +17,8 @@ https://www.raddy.dev/blog/nodejs-setup-with-html-css-js-ejs/
 
 connecting ESJ (HTML) input fields to nodejs
 https://betterprogramming.pub/build-a-login-system-in-node-js-f1ba2abd19a
+
+node JS lessons
+https://www.youtube.com/watch?v=-HPZ1leCV8k
+finished video #2
+
