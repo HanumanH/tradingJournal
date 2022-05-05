@@ -15,7 +15,7 @@ body {
     - background image is in pics folder not root 
     - could not get this image to display in express in ejs until I put "../" in front of the images folder
     - In short - You have to provide a path relative to css to image */
-    background-image: url("../images/loginPageBackground.jpg");
+    background-image: url("loginPageBackground.jpg");
 
 
     /* layout property */
